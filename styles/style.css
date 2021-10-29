@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  /* fonts */
+  --ff-primary: "Lexend Deca", sans-serif;
+  --ff-display: "Big Shoulders Display", cursive;
+
+  /* primary */
+  --bright_orange: hsl(31, 77%, 52%);
+  --dark_cyan: hsl(184, 100%, 22%);
+  --very_dark_cyan: hsl(179, 100%, 13%);
+
+  /* neutral */
+  --transparent_white: hsla(0, 0%, 100%, 0.75);
+  --very_light_gray: hsl(0, 0%, 95%);
+}
+body {
+  font-family: var(--ff-primary);
+  font-size: 15px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--very_light_gray);
+}
+
+.main-container {
+  min-height: 80vh;
+  margin: 1em;
+  border-radius: 5px;
+}
+.car-card {
+  padding: 3em;
+  color: var(--transparent_white);
+}
+.car-card >h2{
+    font-family: var(--ff-display);
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+.sedans {
+  border-radius: 5px 5px 0 0;
+  background: var(--bright_orange);
+}
+.sedans > div > button {
+  color: var(--bright_orange);
+}
+
+.suvs {
+  background: var(--dark_cyan);
+}
+.suvs > div > button {
+  color: var(--dark_cyan);
+}
+.luxury {
+  background: var(--very_dark_cyan);
+  border-radius: 0 0 5px 5px;
+}
+.luxury > div > button {
+  color: var(--very_dark_cyan);
+}
+
+.details-btn {
+  border: 2px solid var(--transparent_white);
+  margin-top: 2em;
+  background-color: var(--very_light_gray);
+  padding: 0.75em 1.5em;
+  border-radius: 3em;
+  font-family: var(--ff-primary);
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+.details-btn:hover {
+  background-color: transparent;
+  color: var(--transparent_white);
+}
+@media only screen and (min-width: 1440px) {
+  .main-container {
+    min-height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 60vw;
+    border-radius: 5px;
+  }
+  .car-card {
+    display: grid;
+  }
+  .details-btn {
+    padding: 0.75em 1.5em;
+  }
+  .sedans {
+    border-radius: 5px 0 0 5px;
+  }
+  .luxury {
+    border-radius: 0 5px 5px 0;
+  }
+}
+@media (min-width: 600px) and (max-width: 1440px) {
+  .main-container {
+    padding: 0 5em;
+  }
+}
+.attribution {
+  margin-top: 2em;
+  font-size: 15px;
+}
